@@ -14,6 +14,10 @@ def page3():
     my_string3 = '''<h1>This is page 3!</h1><p>And of end of our journey!</p>'''
     return my_string3
 
+@app.route('/hello/<name>')
+def hello_name(name):
+    return '<h1>Hello '+name+'</h1>'
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, threaded=True, debug=True)
